@@ -1,18 +1,25 @@
 console.log("vi er i fetchkommuer")
 const urlKommuner = "https://api.dataforsyningen.dk/kommuner"
 
-function fetchKommuner() {
-    console.log("2222 fetch kommune")
-    return fetch(urlKommuner).then((response) => response.json())
+function fetchKommuner(url) {
+    console.log(url)
+    return fetch(url).then((response) => response.json())
 }
 
-function actionFetch() {
-    console.log("11111 action fetch")
-    const kommuner = fetchKommuner()
-    console.log("3333 done fetch kommuner")
-    console.log(kommuner)
+function showKommune(kom) {
+    console.log(kom)
+}
+
+async function showAllKommuner() {
+    const kommuneList = await fetchKommuner(urlKommuner);
+    console.log(kommuneList)
+    kommuneList.forEach(showKommune)
+}
+
+function actionShowKommuner() {
+    showAllKommuner()
 }
 
 const pbFetchKommuner = document.getElementById("pbFetchKommuner")
-pbFetchKommuner.addEventListener('click', actionFetch)
+pbFetchKommuner.addEventListener('click', actionShowKommuner)
 
