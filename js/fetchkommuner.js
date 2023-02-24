@@ -14,7 +14,6 @@ function fillKommuneDropDown(kom) {
     el.value = kom.kode
     el.kommune = kom
     ddKommuner.appendChild(el)
-
 }
 
 async function showAllKommuner() {
