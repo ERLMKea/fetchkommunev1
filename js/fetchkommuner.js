@@ -6,14 +6,14 @@ function fetchKommuner(url) {
     return fetch(url).then((response) => response.json())
 }
 
-function showKommune(kom) {
+function fillKommuneDropDown(kom) {
     console.log(kom)
 }
 
 async function showAllKommuner() {
     const kommuneList = await fetchKommuner(urlKommuner);
     console.log(kommuneList)
-    kommuneList.forEach(showKommune)
+    kommuneList.forEach(fillKommuneDropDown())
 }
 
 function actionShowKommuner() {
