@@ -2,7 +2,7 @@ console.log("jeg er i dropdown")
 const fruits = []
 fruits.push({"name":"æble", "style":"fruit"})
 fruits.push({"name": "pære", "style" : "fruit"})
-fruits.push({"name": "peanut", "style" : "notfruit"})
+fruits.push({"name": "peanut", "style" : "nut"})
 fruits.push({"name": "appelsin", "style" : "fruit"})
 
 console.log(fruits)
